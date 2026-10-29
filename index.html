@@ -59,6 +59,11 @@ a:hover { color: #172E40; }
   .tc-foot-nav { flex-direction: column; gap: 0 !important; width: 100%; }
   .tc-foot-nav a { display: block; padding: 12px 0; border-top: 1px solid #EEF2F5; font-size: 15px; }
 }
+/* Estados de hover (vieram como atributo da ferramenta de desenho; aqui viram CSS). */
+.tc-hv-1:hover { color:#172E40 !important; }
+.tc-hv-2:hover { background:#0F2130 !important;color:#FFFFFF !important; }
+.tc-hv-3:hover { background:#0B6578 !important;color:#FFFFFF !important; }
+.tc-hv-4:hover { border-color:#C9D3DA !important; }
 </style>
 </head>
 <body>
@@ -72,11 +77,11 @@ a:hover { color: #172E40; }
       </a>
       <nav class="tc-nav" style="margin-left:auto;display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px 28px;font-size:14px">
         <div class="tc-links" id="tc-links">
-          <a href="#como" style="color:#4A5D6B" style-hover="color:#172E40">Como funciona</a>
-          <a href="#relatorio" style="color:#4A5D6B" style-hover="color:#172E40">O relatório</a>
-          <a href="#para-quem" style="color:#4A5D6B" style-hover="color:#172E40">Para quem</a>
+          <a href="#como" style="color:#4A5D6B" class="tc-hv-1">Como funciona</a>
+          <a href="#relatorio" style="color:#4A5D6B" class="tc-hv-1">O relatório</a>
+          <a href="#para-quem" style="color:#4A5D6B" class="tc-hv-1">Para quem</a>
         </div>
-        <a class="tc-cta" href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;height:40px;padding:0 18px;border-radius:10px;background:#172E40;color:#FFFFFF;font-weight:500" style-hover="background:#0F2130;color:#FFFFFF">Falar com a gente</a>
+        <a class="tc-cta tc-hv-2" href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;height:40px;padding:0 18px;border-radius:10px;background:#172E40;color:#FFFFFF;font-weight:500" >Falar com a gente</a>
         <button class="tc-burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="tc-links">
           <span></span><span></span><span></span>
         </button>
@@ -91,13 +96,13 @@ a:hover { color: #172E40; }
       <div style="position:absolute;width:640px;height:640px;left:-240px;bottom:-320px;border-radius:999px;background:radial-gradient(closest-side, rgba(23,46,64,0.08), rgba(23,46,64,0) 70%)"></div>
           </div>
     <main>
-<section data-screen-label="Hero" style="position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(20px,4vw,48px) clamp(64px,8vw,112px);display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,80px);align-items:center">
+<section style="position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,112px) clamp(20px,4vw,48px) clamp(64px,8vw,112px);display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,80px);align-items:center">
     <div style="flex:1 1 440px;min-width:0;animation:tcUp 0.8s cubic-bezier(0.16,1,0.3,1) both">
       <p style="margin:0 0 24px;display:inline-flex;gap:10px;align-items:center;font-size:14px;font-weight:500;color:#0E7D90"><span style="width:8px;height:8px;border-radius:999px;background:#149EB5"></span>Avaliação comportamental</p>
       <h1 style="margin:0;font-family:'Schibsted Grotesk',sans-serif;letter-spacing:-0.02em;font-weight:400;font-size:clamp(38px,5vw,64px);line-height:1.04;letter-spacing:-0.035em;text-wrap:balance">Mapa individual&nbsp;de <em style="font-style:normal;color:#149EB5">competências comportamentais.</em></h1>
       <p style="margin:28px 0 0;max-width:46ch;font-size:18px;line-height:1.6;color:#4A5D6B;text-wrap:pretty">Enxergue com clareza os padrões que impulsionam resultados e os que pedem desenvolvimento, no modelo de competências da sua organização.</p>
       <div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
-        <a href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;height:52px;padding:0 26px;border-radius:12px;background:#0E7D90;color:#FFFFFF;font-size:16px;font-weight:600;box-shadow:0 12px 32px -12px rgba(20,158,181,0.6)" style-hover="background:#0B6578;color:#FFFFFF">Falar com a gente</a>
+        <a href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;height:52px;padding:0 26px;border-radius:12px;background:#0E7D90;color:#FFFFFF;font-size:16px;font-weight:600;box-shadow:0 12px 32px -12px rgba(20,158,181,0.6)" class="tc-hv-3">Falar com a gente</a>
       </div>
     </div>
 
@@ -140,7 +145,7 @@ a:hover { color: #172E40; }
   </section>
   </div>
 
-  <section id="como" data-screen-label="Como funciona" style="border-top:1px solid #E1E8EE;background:#FFFFFF">
+  <section id="como" style="border-top:1px solid #E1E8EE;background:#FFFFFF">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) clamp(20px,4vw,48px)">
       <div style="display:flex;flex-wrap:wrap;gap:24px clamp(40px,8vw,120px);align-items:flex-end;justify-content:space-between;margin-bottom:40px">
         <div style="flex:1 1 420px;min-width:0">
@@ -194,7 +199,7 @@ a:hover { color: #172E40; }
     </div>
   </section>
 
-  <div style="border-top:1px solid #E1E8EE;background:#F1F6FA"><section id="relatorio" data-screen-label="O relatório" style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) clamp(20px,4vw,48px)">
+  <div style="border-top:1px solid #E1E8EE;background:#F1F6FA"><section id="relatorio" style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) clamp(20px,4vw,48px)">
     <div style="display:flex;flex-wrap:wrap;gap:24px clamp(40px,8vw,120px);align-items:flex-end;justify-content:space-between;margin-bottom:40px">
         <div style="flex:1 1 420px;min-width:0">
           <p style="margin:0 0 16px;font-size:12.5px;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;color:#0E7D90">O relatório</p>
@@ -203,28 +208,28 @@ a:hover { color: #172E40; }
       </div>
     <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,72px);align-items:center">
       <div style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:10px">
-        <div data-pick="0" role="button" tabindex="0" style="position:relative;cursor:pointer;padding:20px 22px;border-radius:14px;border:1px solid #E3E8EC;background:rgba(255,255,255,0.6)" style-hover="border-color:#C9D3DA">
+        <div data-pick="0" role="button" tabindex="0" style="position:relative;cursor:pointer;padding:20px 22px;border-radius:14px;border:1px solid #E3E8EC;background:rgba(255,255,255,0.6)" class="tc-hv-4">
           <span data-glow="0" style="position:absolute;inset:-1px;border-radius:14px;border:1px solid #149EB5;background:#FFFFFF;box-shadow:0 18px 40px -24px rgba(20,158,181,0.55);transition:opacity 0.45s ease;opacity:1"></span>
           <div style="position:relative">
             <h3 style="margin:0 0 6px;font-size:18px;font-weight:600">Seu mapa de liderança</h3>
             <p style="margin:0;font-size:15px;line-height:1.55;color:#4A5D6B;text-wrap:pretty">O que hoje favorece a atuação e onde está a maior distância do modelo.</p>
           </div>
         </div>
-        <div data-pick="1" role="button" tabindex="0" style="position:relative;cursor:pointer;padding:20px 22px;border-radius:14px;border:1px solid #E3E8EC;background:rgba(255,255,255,0.6)" style-hover="border-color:#C9D3DA">
+        <div data-pick="1" role="button" tabindex="0" style="position:relative;cursor:pointer;padding:20px 22px;border-radius:14px;border:1px solid #E3E8EC;background:rgba(255,255,255,0.6)" class="tc-hv-4">
           <span data-glow="1" style="position:absolute;inset:-1px;border-radius:14px;border:1px solid #149EB5;background:#FFFFFF;box-shadow:0 18px 40px -24px rgba(20,158,181,0.55);transition:opacity 0.45s ease;opacity:0"></span>
           <div style="position:relative">
             <h3 style="margin:0 0 6px;font-size:18px;font-weight:600">Leitura por competência</h3>
             <p style="margin:0;font-size:15px;line-height:1.55;color:#4A5D6B;text-wrap:pretty">Contribuições do perfil e pontos de atenção, explicados em texto.</p>
           </div>
         </div>
-        <div data-pick="2" role="button" tabindex="0" style="position:relative;cursor:pointer;padding:20px 22px;border-radius:14px;border:1px solid #E3E8EC;background:rgba(255,255,255,0.6)" style-hover="border-color:#C9D3DA">
+        <div data-pick="2" role="button" tabindex="0" style="position:relative;cursor:pointer;padding:20px 22px;border-radius:14px;border:1px solid #E3E8EC;background:rgba(255,255,255,0.6)" class="tc-hv-4">
           <span data-glow="2" style="position:absolute;inset:-1px;border-radius:14px;border:1px solid #149EB5;background:#FFFFFF;box-shadow:0 18px 40px -24px rgba(20,158,181,0.55);transition:opacity 0.45s ease;opacity:0"></span>
           <div style="position:relative">
             <h3 style="margin:0 0 6px;font-size:18px;font-weight:600">Por onde começar</h3>
             <p style="margin:0;font-size:15px;line-height:1.55;color:#4A5D6B;text-wrap:pretty">Entre os pontos de atenção, as características que mais impactam competências, com uma pergunta para cada.</p>
           </div>
         </div>
-        <div data-pick="3" role="button" tabindex="0" style="position:relative;cursor:pointer;padding:20px 22px;border-radius:14px;border:1px solid #E3E8EC;background:rgba(255,255,255,0.6)" style-hover="border-color:#C9D3DA">
+        <div data-pick="3" role="button" tabindex="0" style="position:relative;cursor:pointer;padding:20px 22px;border-radius:14px;border:1px solid #E3E8EC;background:rgba(255,255,255,0.6)" class="tc-hv-4">
           <span data-glow="3" style="position:absolute;inset:-1px;border-radius:14px;border:1px solid #149EB5;background:#FFFFFF;box-shadow:0 18px 40px -24px rgba(20,158,181,0.55);transition:opacity 0.45s ease;opacity:0"></span>
           <div style="position:relative">
             <h3 style="margin:0 0 6px;font-size:18px;font-weight:600">Perfil completo</h3>
@@ -252,7 +257,7 @@ a:hover { color: #172E40; }
     </div>
   </section></div>
 
-  <section data-screen-label="O modelo é da organização" style="background:#172E40;color:#FFFFFF">
+  <section style="background:#172E40;color:#FFFFFF">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) clamp(20px,4vw,48px);display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,88px);align-items:center">
       <div style="flex:1 1 380px;min-width:0">
         <p style="margin:0 0 16px;font-size:12.5px;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;color:#5CC6D8">O modelo é da organização</p>
@@ -297,7 +302,7 @@ a:hover { color: #172E40; }
     </div>
   </section>
 
-  <section data-screen-label="O que isso gera" style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) clamp(20px,4vw,48px)">
+  <section style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) clamp(20px,4vw,48px)">
     <div style="display:flex;flex-wrap:wrap;gap:24px clamp(40px,8vw,120px);align-items:flex-end;justify-content:space-between;margin-bottom:40px">
         <div style="flex:1 1 420px;min-width:0">
           <p style="margin:0 0 16px;font-size:12.5px;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;color:#0E7D90">O que isso gera</p>
@@ -321,7 +326,7 @@ a:hover { color: #172E40; }
     </div>
   </section>
 
-  <section id="para-quem" data-screen-label="Para quem aplica" style="border-top:1px solid #E1E8EE;background:#F4F5F7">
+  <section id="para-quem" style="border-top:1px solid #E1E8EE;background:#F4F5F7">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,112px) clamp(20px,4vw,48px)">
       <div style="display:flex;flex-wrap:wrap;gap:24px clamp(40px,8vw,120px);align-items:flex-end;justify-content:space-between;margin-bottom:40px">
         <div style="flex:1 1 420px;min-width:0">
@@ -349,7 +354,7 @@ a:hover { color: #172E40; }
     </div>
   </section>
 
-  <section id="contato" data-screen-label="Fechamento" style="border-top:1px solid #E1E8EE;position:relative;overflow:hidden;isolation:isolate;background:#F1F6FA">
+  <section id="contato" style="border-top:1px solid #E1E8EE;position:relative;overflow:hidden;isolation:isolate;background:#F1F6FA">
     <div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;pointer-events:none">
       <div style="position:absolute;inset:0;background-image:radial-gradient(#C9D3DA 1px, transparent 1px);background-size:28px 28px;opacity:0.8;-webkit-mask-image:radial-gradient(ellipse 55% 75% at 50% 50%, #000 15%, transparent 75%);mask-image:radial-gradient(ellipse 55% 75% at 50% 50%, #000 15%, transparent 75%)"></div>
       <div style="position:absolute;width:760px;height:760px;left:50%;top:50%;margin:-380px 0 0 -380px;border-radius:999px;background:radial-gradient(closest-side, rgba(20,158,181,0.22), rgba(20,158,181,0) 70%)"></div>
@@ -358,7 +363,7 @@ a:hover { color: #172E40; }
       <p style="margin:0 0 16px;font-size:12.5px;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;color:#0E7D90">Próximo passo</p>
       <h2 style="margin:0;max-width:16ch;font-family:'Schibsted Grotesk',sans-serif;font-weight:500;font-size:clamp(36px,4.6vw,58px);line-height:1.08;letter-spacing:-0.035em;text-wrap:balance">Uma conversa, <span style="color:#149EB5">sem compromisso.</span></h2>
       <p style="margin:22px 0 0;max-width:44ch;font-size:17px;line-height:1.65;color:#4A5D6B;text-wrap:pretty">Você conta o que precisa medir. A gente explica o modelo, a aplicação e o que o relatório entrega.</p>
-      <a href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="margin-top:36px;display:inline-flex;align-items:center;height:54px;padding:0 30px;border-radius:12px;background:#172E40;color:#FFFFFF;font-size:16px;font-weight:600;box-shadow:0 16px 36px -18px rgba(23,46,64,0.6)" style-hover="background:#0F2130;color:#FFFFFF">Marcar a conversa</a>
+      <a href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="margin-top:36px;display:inline-flex;align-items:center;height:54px;padding:0 30px;border-radius:12px;background:#172E40;color:#FFFFFF;font-size:16px;font-weight:600;box-shadow:0 16px 36px -18px rgba(23,46,64,0.6)" class="tc-hv-2">Marcar a conversa</a>
     </div>
   </section>
 </main>
@@ -366,66 +371,16 @@ a:hover { color: #172E40; }
   <footer style="border-top:1px solid #E1E8EE;padding:16px max(clamp(20px,4vw,48px), calc((100% - 1200px) / 2 + clamp(20px,4vw,48px))) 32px">
     <div class="tc-foot" style="display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid #E3E8EC">
       <a href="#" style="display:flex;align-items:center;gap:10px"><img src="assets/logo-blue-only.svg" alt="" width="30" height="24" style="height:24px;width:auto" /><img src="assets/logo-blue-text.svg" alt="Talent Code" width="111" height="9" style="height:9px;width:auto" /></a>
-      <nav class="tc-foot-nav" style="display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px"><a href="#como" style="color:#4A5D6B" style-hover="color:#172E40">Como funciona</a><a href="#relatorio" style="color:#4A5D6B" style-hover="color:#172E40">O relatório</a><a href="#para-quem" style="color:#4A5D6B" style-hover="color:#172E40">Para quem</a><a href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="color:#4A5D6B" style-hover="color:#172E40">Contato</a></nav>
+      <nav class="tc-foot-nav" style="display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px"><a href="#como" style="color:#4A5D6B" class="tc-hv-1">Como funciona</a><a href="#relatorio" style="color:#4A5D6B" class="tc-hv-1">O relatório</a><a href="#para-quem" style="color:#4A5D6B" class="tc-hv-1">Para quem</a><a href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="color:#4A5D6B" class="tc-hv-1">Contato</a></nav>
       <span style="font-size:14px;color:#4A5D6B">talentcode.com.br</span>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:8px 12px;padding-top:20px;font-size:12.5px;color:#5B6E7C">
-      <span>© 2026 Talent Code</span><span>·</span><a href="#" style="color:#5B6E7C" style-hover="color:#172E40">Política de privacidade</a>
+      <span>© 2026 Talent Code</span><span>·</span><a href="#" style="color:#5B6E7C" class="tc-hv-1">Política de privacidade</a>
     </div>
   </footer>
 </div>
 
-<script>
-(() => {
-  // ---- menu do celular
-  const nav = document.querySelector('.tc-nav'), burger = document.querySelector('.tc-burger');
-  if (nav && burger) {
-    const abre = (v) => { nav.dataset.open = v ? 'true' : 'false'; burger.setAttribute('aria-expanded', String(v)); burger.setAttribute('aria-label', v ? 'Fechar menu' : 'Abrir menu'); };
-    burger.addEventListener('click', () => abre(nav.dataset.open !== 'true'));
-    nav.querySelectorAll('.tc-links a').forEach((a) => a.addEventListener('click', () => abre(false)));
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') abre(false); });
-  }
-
-  const $$ = (q) => Array.from(document.querySelectorAll(q));
-  // ---- cartões do relatório: um aceso por vez
-  let ativo = 0, t;
-  function mostra(i) {
-    ativo = i;
-    $$('[data-glow]').forEach((el) => { el.style.opacity = Number(el.dataset.glow) === i ? '1' : '0'; });
-    $$('[data-page]').forEach((el) => {
-      const k = Number(el.dataset.page);
-      el.style.opacity = k === i ? '1' : '0';
-      el.style.transform = k === i ? 'none' : (k < i ? 'translateY(-12px) scale(0.98)' : 'translateY(18px) scale(0.98)');
-    });
-  }
-  function agenda(ms) { clearTimeout(t); t = setTimeout(() => { mostra((ativo + 1) % 4); agenda(4000); }, ms); }
-  $$('[data-pick]').forEach((el) => {
-    const i = Number(el.dataset.pick);
-    const escolhe = () => { mostra(i); agenda(9000); };
-    el.addEventListener('click', escolhe);
-    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); escolhe(); } });
-  });
-  agenda(4000);
-
-  // ---- o modelo é da organização: Indústria x Startup
-  let ramo = 0, r;
-  function aplicaRamo(i) {
-    ramo = i; const st = i === 1;
-    const pill = document.querySelector('[data-pill]'); if (pill) pill.style.left = st ? '50%' : '4px';
-    $$('[data-cramo]').forEach((el) => { el.style.color = Number(el.dataset.cramo) === i ? '#FFFFFF' : '#B5C4CF'; });
-    $$('[data-badge]').forEach((el) => {
-      el.textContent = st ? 'Favorece' : 'Atenção';
-      el.style.background = st ? 'rgba(20,158,181,0.22)' : 'rgba(234,138,74,0.18)';
-      el.style.color = st ? '#7FD3E1' : '#F5B68A';
-    });
-    const faixas = st ? ['6%', '8%', '28%'] : ['64%', '62%', '66%'];
-    $$('[data-band]').forEach((el) => { el.style.left = faixas[Number(el.dataset.band)]; });
-  }
-  function agendaRamo(ms) { clearTimeout(r); r = setTimeout(() => { aplicaRamo(1 - ramo); agendaRamo(5000); }, ms); }
-  $$('[data-ramo]').forEach((el) => el.addEventListener('click', () => { aplicaRamo(Number(el.dataset.ramo)); agendaRamo(10000); }));
-  agendaRamo(5000);
-})();
-</script>
+<script src="/assets/site.js" defer></script>
 
 </body>
 </html>
