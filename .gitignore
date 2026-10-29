@@ -1,0 +1,3 @@
+# Export do Claude Design: fonte do desenho, não do site
+*.zip
+.DS_Store
