@@ -34,6 +34,28 @@ a:hover { color: #172E40; }
 [data-motion="off"] * { animation-play-state: paused !important; }
 @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; } }
 </style>
+<style>
+/* Celular: menu no sanduíche, CTA fica à vista; rodapé com um link por linha. */
+.tc-links { display: contents; }
+.tc-burger { display: none; }
+@media (max-width: 720px) {
+  .tc-nav { gap: 10px; flex-wrap: nowrap !important; }
+  .tc-logo-text { display: none; }
+  .tc-cta { height: 36px !important; padding: 0 14px !important; font-size: 13px; white-space: nowrap; }
+  .tc-burger { display: inline-flex; flex-direction: column; justify-content: center; gap: 4px; width: 40px; height: 36px; padding: 0 9px; border: 1px solid #DCE6EE; border-radius: 10px; background: #FFFFFF; cursor: pointer; }
+  .tc-burger span { display: block; height: 2px; background: #172E40; border-radius: 2px; transition: transform 0.2s, opacity 0.2s; }
+  .tc-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .tc-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .tc-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .tc-links { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; background: #FFFFFF; border-bottom: 1px solid #DCE6EE; padding: 8px 20px 12px; }
+  .tc-links a { display: block; padding: 12px 0; font-size: 16px; border-top: 1px solid #EEF2F5; }
+  .tc-links a:first-child { border-top: 0; }
+  .tc-nav[data-open="true"] .tc-links { display: flex; }
+  .tc-foot { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .tc-foot-nav { flex-direction: column; gap: 0 !important; width: 100%; }
+  .tc-foot-nav a { display: block; padding: 12px 0; border-top: 1px solid #EEF2F5; font-size: 15px; }
+}
+</style>
 </head>
 <body>
 <div data-motion="on" style="min-height:100vh;background:#FFFFFF">
@@ -42,13 +64,18 @@ a:hover { color: #172E40; }
     <div style="max-width:1200px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;align-items:center;gap:24px">
       <a href="#" style="display:flex;align-items:center;gap:12px">
         <img src="assets/logo-blue-only.svg" alt="" style="height:30px;width:auto" />
-        <img src="assets/logo-blue-text.svg" alt="Talent Code" style="height:11px;width:auto" />
+        <img class="tc-logo-text" src="assets/logo-blue-text.svg" alt="Talent Code" style="height:11px;width:auto" />
       </a>
-      <nav style="margin-left:auto;display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px 28px;font-size:14px">
-        <a href="#como" style="color:#4A5D6B" style-hover="color:#172E40">Como funciona</a>
-        <a href="#relatorio" style="color:#4A5D6B" style-hover="color:#172E40">O relatório</a>
-        <a href="#para-quem" style="color:#4A5D6B" style-hover="color:#172E40">Para quem</a>
-        <a href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;height:40px;padding:0 18px;border-radius:10px;background:#172E40;color:#FFFFFF;font-weight:500" style-hover="background:#0F2130;color:#FFFFFF">Falar com a gente</a>
+      <nav class="tc-nav" style="margin-left:auto;display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px 28px;font-size:14px">
+        <div class="tc-links" id="tc-links">
+          <a href="#como" style="color:#4A5D6B" style-hover="color:#172E40">Como funciona</a>
+          <a href="#relatorio" style="color:#4A5D6B" style-hover="color:#172E40">O relatório</a>
+          <a href="#para-quem" style="color:#4A5D6B" style-hover="color:#172E40">Para quem</a>
+        </div>
+        <a class="tc-cta" href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;height:40px;padding:0 18px;border-radius:10px;background:#172E40;color:#FFFFFF;font-weight:500" style-hover="background:#0F2130;color:#FFFFFF">Falar com a gente</a>
+        <button class="tc-burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="tc-links">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
     </div>
   </header>
@@ -331,9 +358,9 @@ a:hover { color: #172E40; }
   </section>
 
   <footer style="border-top:1px solid #E1E8EE;padding:16px max(clamp(20px,4vw,48px), calc((100% - 1200px) / 2 + clamp(20px,4vw,48px))) 32px">
-    <div style="display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid #E3E8EC">
+    <div class="tc-foot" style="display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid #E3E8EC">
       <a href="#" style="display:flex;align-items:center;gap:10px"><img src="assets/logo-blue-only.svg" alt="" style="height:24px;width:auto" /><img src="assets/logo-blue-text.svg" alt="Talent Code" style="height:9px;width:auto" /></a>
-      <nav style="display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px"><a href="#como" style="color:#4A5D6B" style-hover="color:#172E40">Como funciona</a><a href="#relatorio" style="color:#4A5D6B" style-hover="color:#172E40">O relatório</a><a href="#para-quem" style="color:#4A5D6B" style-hover="color:#172E40">Para quem</a><a href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="color:#4A5D6B" style-hover="color:#172E40">Contato</a></nav>
+      <nav class="tc-foot-nav" style="display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px"><a href="#como" style="color:#4A5D6B" style-hover="color:#172E40">Como funciona</a><a href="#relatorio" style="color:#4A5D6B" style-hover="color:#172E40">O relatório</a><a href="#para-quem" style="color:#4A5D6B" style-hover="color:#172E40">Para quem</a><a href="https://wa.me/5511913565760?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20Talent%20Code." target="_blank" rel="noopener" style="color:#4A5D6B" style-hover="color:#172E40">Contato</a></nav>
       <span style="font-size:14px;color:#4A5D6B">talentcode.com.br</span>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:8px 12px;padding-top:20px;font-size:12.5px;color:#6B7F8E">
@@ -344,6 +371,15 @@ a:hover { color: #172E40; }
 
 <script>
 (() => {
+  // ---- menu do celular
+  const nav = document.querySelector('.tc-nav'), burger = document.querySelector('.tc-burger');
+  if (nav && burger) {
+    const abre = (v) => { nav.dataset.open = v ? 'true' : 'false'; burger.setAttribute('aria-expanded', String(v)); burger.setAttribute('aria-label', v ? 'Fechar menu' : 'Abrir menu'); };
+    burger.addEventListener('click', () => abre(nav.dataset.open !== 'true'));
+    nav.querySelectorAll('.tc-links a').forEach((a) => a.addEventListener('click', () => abre(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') abre(false); });
+  }
+
   const $$ = (q) => Array.from(document.querySelectorAll(q));
   // ---- cartões do relatório: um aceso por vez
   let ativo = 0, t;
